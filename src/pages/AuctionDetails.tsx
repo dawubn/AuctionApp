@@ -13,7 +13,6 @@ export function AuctionDetails() {
     const { t, te } = useI18n();
 
     const auction = auctionQ.data;
-    console.log(auction);
     const bids = useMemo(() => bidsQ.data ?? [], [bidsQ.data]);
 
     const currentPrice = useMemo(() => {

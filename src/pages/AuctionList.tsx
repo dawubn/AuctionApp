@@ -13,8 +13,6 @@ export function AuctionsList() {
         return showEnded ? arr : arr.filter((a) => a.status === "active");
     }, [data, showEnded]);
 
-    console.log("showEnded", showEnded, "sample", data?.[0]);
-
     if (isLoading) return <div>{t("loading")}</div>;
     if (error) {
         return <div className="text-red-600">{t("error_prefix", { message: te((error as Error).message) })}</div>;
