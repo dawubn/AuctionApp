@@ -1,11 +1,12 @@
-import { createBrowserRouter } from "react-router-dom";
+
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home";
 import { CreateAuction } from "./pages/CreateAuction";
 import { AuctionDetails } from "./pages/AuctionDetails";
 import { AuctionsList } from "./pages/AuctionList";
+import { createHashRouter } from "react-router-dom";
 
-export const router = createBrowserRouter(
+export const router = createHashRouter(
     [
         {
             path: "/",
@@ -22,3 +23,4 @@ export const router = createBrowserRouter(
         basename: import.meta.env.BASE_URL,
     }
 );
+
